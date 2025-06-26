@@ -27,7 +27,7 @@
 ## 🌐 Live Preview
 
 <p align="center">
-  🔗 <a href="https://Anshika09Singh.github.io/My-techverse-Portfolio/" target="_blank"><b>Click to Launch My Portfolio 🚀</b></a>
+  🔗 <a href="[https://Anshika09Singh.github.io/My-techverse-Portfolio/" target="_blank](https://my-techverse-portfolio.vercel.app/)"><b>Click to Launch My Portfolio 🚀</b></a>
 </p>
 
 ---
