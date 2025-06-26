@@ -13,21 +13,21 @@
 ## 💫 Portfolio Highlights
 
 <p align="center">
-  🚀 3D-Animated | ⚡ Interactive | 🎯 Purpose-Driven
+  🚀 <b>3D-Animated</b> &nbsp; | &nbsp; ⚡ <b>Interactive</b> &nbsp; | &nbsp; 🎯 <b>Purpose-Driven</b>
 </p>
 
-- 🤖 **AI & Machine Learning**  
-- 🌐 **Web Development Projects**  
+- 🤖 **AI & Machine Learning**
+- 🌐 **Web Development Projects**
 - 🏅 **Certifications & Achievements**
 
-🌀 A dynamic and visually-rich portfolio designed to reflect my tech journey through animation, interactivity, and responsive UI magic.
+✨ Experience a bright, fluid, and aesthetic portfolio crafted with glowing gradients, motion transitions, and responsive animations — showcasing my journey as a creative tech explorer!
 
 ---
 
 ## 🌐 Live Preview
 
 <p align="center">
-  🔗 <a href="[https://Anshika09Singh.github.io/My-techverse-Portfolio/" target="_blank](https://my-techverse-portfolio.vercel.app/)"><b>Click to Launch My Portfolio 🚀</b></a>
+  🔗 <a href="https://my-techverse-portfolio.vercel.app/" target="_blank"><b>Click to Launch My Portfolio 🚀</b></a>
 </p>
 
 ---
@@ -35,5 +35,5 @@
 ## 🧰 Tech Stack Used
 
 ```txt
-🧠 HTML5      🎨 Tailwind CSS
-⚙️ JavaScript 🔁 Python (Flask)
+🧠 HTML5             🎨 Tailwind CSS
+⚙️ JavaScript        🔁 Python (Flask - for backend projects)
