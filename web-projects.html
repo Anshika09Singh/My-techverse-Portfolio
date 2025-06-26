@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Projects | Anshika</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .card-glow:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(58, 123, 213, 0.4);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white font-sans">
+
+  <!-- Header -->
+  <header class="shadow-md py-4 bg-gray-950 sticky top-0 z-50">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-400">Anshika Singh</h1>
+      <nav class="space-x-4 text-gray-300 font-medium">
+        <a href="index.html" class="hover:text-blue-400">Home</a>
+        <a href="techstack.html" class="hover:text-blue-400">Tech Stack</a>
+        <a href="ml-projects.html" class="hover:text-blue-400">ML Projects</a>
+        <a href="web-projects.html" class="text-blue-400 font-semibold underline">Web Projects</a>
+        <a href="certificates.html" class="hover:text-blue-400">Certificates</a>
+        <a href="contact.html" class="hover:text-blue-400">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Title Section -->
+  <section class="text-center py-16 bg-gradient-to-br from-indigo-900 via-gray-800 to-gray-900">
+    <h2 class="text-4xl font-bold text-white tracking-wide">🚀 Web Development Projects</h2>
+    <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+      Explore my interactive and full-stack projects built using Flask, MERN, GoLang, and modern design systems.
+    </p>
+  </section>
+
+  <!-- Horizontal Slider -->
+  <section class="px-6 py-16 overflow-x-auto scrollbar-hide">
+    <div class="flex space-x-6 min-w-full transition-transform duration-300">
+
+      <!-- Project Card -->
+<div class="min-w-[300px] max-w-sm bg-gradient-to-br from-blue-700 to-indigo-900 rounded-2xl overflow-hidden shadow-xl card-glow transition p-5 flex flex-col justify-between">
+  <img src="assets/assets/images/neuro.png" alt="Neurofit Project Screenshot" class="rounded-xl h-40 w-full object-cover mb-4" />
+  <h3 class="text-xl font-bold text-white">Neurofit</h3>
+  <p class="text-sm text-blue-100 mt-1">Cognitive training hub built with Tailwind and JS</p>
+  <a href="https://neurofit-1f.onrender.com/" target="_blank" class="mt-3 text-blue-300 hover:underline">Live Demo →</a>
+</div>
+
+      <!-- Project Card -->
+     <!-- Project Card -->
+<div class="min-w-[300px] max-w-sm bg-gradient-to-br from-pink-600 to-purple-800 rounded-2xl overflow-hidden shadow-xl card-glow transition p-5 flex flex-col justify-between">
+  <img src="assets/assets/images/career.png" alt="Career Website Screenshot" class="rounded-xl h-40 w-full object-cover mb-4" />
+  <h3 class="text-xl font-bold text-white">Career Website</h3>
+  <p class="text-sm text-pink-100 mt-1">Job listing and form website built using Flask</p>
+  <a href="https://github.com/Anshika09Singh/jovian-careers-website" target="_blank" class="mt-3 text-pink-200 hover:underline">GitHub Repo →</a>
+</div>
+
+
+      <!-- Project Card -->
+      <div class="min-w-[300px] max-w-sm bg-gradient-to-br from-yellow-500 to-orange-600 rounded-2xl overflow-hidden shadow-xl card-glow transition p-5 flex flex-col justify-between">
+        <div class="h-48 bg-cover bg-center rounded-xl mb-4" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3 class="text-xl font-bold text-white">Legal System</h3>
+        <p class="text-sm text-yellow-100 mt-1">Lawyer-client platform with secure docs</p>
+        <a href="https://github.com/Anshika09Singh/Legal-System" class="mt-3 text-yellow-200 hover:underline">GitHub Repo →</a>
+      </div>
+
+      <!-- Project Card -->
+      <div class="min-w-[300px] max-w-sm bg-gradient-to-br from-green-500 to-teal-700 rounded-2xl overflow-hidden shadow-xl card-glow transition p-5 flex flex-col justify-between">
+        <div class="h-48 bg-cover bg-center rounded-xl mb-4" style="background-image: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3 class="text-xl font-bold text-white">Devcation</h3>
+        <p class="text-sm text-green-100 mt-1">UI/UX Showcase and form layouts</p>
+        <a href="https://devcation-2025-anshika09singhs-projects.vercel.app/" class="mt-3 text-green-200 hover:underline">Live Demo →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 border-t border-gray-700 bg-gray-900">
+    <p class="text-gray-400">© 2025 Anshika Singh • Crafted with ❤️ + Tailwind</p>
+  </footer>
+</body>
+</html>

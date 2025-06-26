@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ML Projects | Anshika</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .card-glow:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(58, 123, 213, 0.4);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white font-sans">
+
+  <!-- Header -->
+  <header class="shadow-md py-4 bg-gray-950 sticky top-0 z-50">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-400">Anshika Singh</h1>
+      <nav class="space-x-4 text-gray-300 font-medium">
+        <a href="index.html" class="hover:text-blue-400">Home</a>
+        <a href="techstack.html" class="hover:text-blue-400">Tech Stack</a>
+        <a href="ml-projects.html" class="text-blue-400 font-semibold underline">ML Projects</a>
+        <a href="web-projects.html" class="hover:text-blue-400">Web Projects</a>
+        <a href="certificates.html" class="hover:text-blue-400">Certificates</a>
+        <a href="contact.html" class="hover:text-blue-400">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Title -->
+  <section class="text-center py-16 bg-gradient-to-br from-indigo-900 via-gray-800 to-gray-900">
+    <h2 class="text-4xl font-bold text-white tracking-wide">🤖 Machine Learning & AI Projects</h2>
+    <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+      A showcase of predictive models, real-time AI apps, and intelligent tools.
+    </p>
+  </section>
+
+  <!-- Horizontal Scroll Section -->
+  <section class="px-6 py-16 overflow-x-auto scrollbar-hide">
+    <div class="flex space-x-6 min-w-full transition-transform duration-300">
+
+      <!-- Card 1 -->
+      <div class="min-w-[300px] max-w-sm bg-gradient-to-br from-blue-700 to-indigo-900 rounded-2xl overflow-hidden shadow-xl card-glow transition p-5 flex flex-col justify-between">
+        <img src="assets/assets/images/image.png" class="rounded-xl h-40 w-full object-cover mb-4" />
+        <h3 class="text-xl font-bold">diabetes-care-with-ai</h3>
+        <p class="text-blue-100 text-sm mt-1">Detects human emotion via webcam using FaceAPI + TensorFlow.js</p>
+        <a href="https://diabetes-care-with-ai-5-nd7x.onrender.com/" class="mt-3 text-blue-300 hover:underline">LIVE DEMO →</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="min-w-[300px] max-w-sm bg-gradient-to-br from-purple-700 to-pink-700 rounded-2xl overflow-hidden shadow-xl card-glow transition p-5 flex flex-col justify-between">
+        <img src="assets/assets/images/email.jpeg" class="rounded-xl h-40 w-full object-cover mb-4" />
+        <h3 class="text-xl font-bold">Pitch Classifier</h3>
+        <p class="text-purple-100 text-sm mt-1">Email Pitch Classifier</p>
+        <a href="https://github.com/Anshika09Singh/pitch-classifier" class="mt-3 text-pink-200 hover:underline">Github  →</a>
+      </div>
+
+      <!-- Card 3 -->
+      <!-- <div class="min-w-[300px] max-w-sm bg-gradient-to-br from-green-600 to-emerald-700 rounded-2xl overflow-hidden shadow-xl card-glow transition p-5 flex flex-col justify-between">
+        <img src="assets/images/taskjuggler.jpg" class="rounded-xl h-40 w-full object-cover mb-4" />
+        <h3 class="text-xl font-bold">Task Juggler</h3>
+        <p class="text-green-100 text-sm mt-1">Tests task-switching & flexibility with cognitive rules</p>
+        <a href="#" class="mt-3 text-green-200 hover:underline">GitHub Repo →</a>
+      </div> -->
+
+      <!-- Card 4 -->
+      <!-- <div class="min-w-[300px] max-w-sm bg-gradient-to-br from-red-700 to-pink-600 rounded-2xl overflow-hidden shadow-xl card-glow transition p-5 flex flex-col justify-between">
+        <img src="assets/images/fakenews.jpg" class="rounded-xl h-40 w-full object-cover mb-4" />
+        <h3 class="text-xl font-bold">Fake News Classifier</h3>
+        <p class="text-pink-100 text-sm mt-1">Detects fake news headlines with NLP and Logistic Regression</p>
+        <a href="#" class="mt-3 text-pink-200 hover:underline">GitHub Repo →</a>
+      </div> -->
+
+      <!-- Card 5 -->
+      <!-- <div class="min-w-[300px] max-w-sm bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl overflow-hidden shadow-xl card-glow transition p-5 flex flex-col justify-between">
+        <img src="assets/images/heart.jpg" class="rounded-xl h-40 w-full object-cover mb-4" />
+        <h3 class="text-xl font-bold">Heart Disease Predictor</h3>
+        <p class="text-yellow-100 text-sm mt-1">Uses health data + Random Forest for disease prediction</p>
+        <a href="#" class="mt-3 text-yellow-200 hover:underline">GitHub Repo →</a>
+      </div> -->
+
+      <!-- Card 6 -->
+      <!-- <div class="min-w-[300px] max-w-sm bg-gradient-to-br from-indigo-600 to-blue-700 rounded-2xl overflow-hidden shadow-xl card-glow transition p-5 flex flex-col justify-between">
+        <img src="assets/images/pricepredictor.jpg" class="rounded-xl h-40 w-full object-cover mb-4" />
+        <h3 class="text-xl font-bold">House Price Predictor</h3>
+        <p class="text-indigo-100 text-sm mt-1">Regression ML model for estimating real estate values</p>
+        <a href="#" class="mt-3 text-blue-200 hover:underline">Live Demo →</a>
+      </div> -->
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 border-t border-gray-700 bg-gray-900">
+    <p class="text-gray-400">© 2025 Anshika Singh • Powered by ML + Tailwind CSS</p>
+  </footer>
+
+</body>
+</html>

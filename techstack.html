@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Stack | Anshika</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .slide-container {
+      scroll-snap-type: x mandatory;
+      overflow-x: auto;
+      display: flex;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .slide-item {
+      min-width: 300px;
+      scroll-snap-align: start;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-purple-50 via-white to-blue-50 text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="shadow-md py-4 bg-white sticky top-0 z-50">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-700">Anshika Singh</h1>
+      <nav class="space-x-4 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="techstack.html" class="text-blue-600 font-semibold underline">Tech Stack</a>
+        <a href="ml-projects.html" class="hover:text-blue-600">ML Projects</a>
+        <a href="web-projects.html" class="hover:text-blue-600">Web Projects</a>
+        <a href="certificates.html" class="hover:text-blue-600">Certificates</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section Title -->
+  <section class="text-center py-16">
+    <h2 class="text-4xl font-extrabold text-purple-700 mb-4">💻 My Tech Stack</h2>
+    <p class="text-lg text-gray-600 max-w-xl mx-auto">
+      Tools and technologies I use to build intelligent and dynamic applications.
+    </p>
+  </section>
+
+  <!-- Sliding Tech Stack Section -->
+  <section class="slide-container">
+    <!-- ML Libraries -->
+    <div class="slide-item bg-white rounded-xl shadow-lg border-t-4 border-blue-500 p-6">
+      <h3 class="text-xl font-bold mb-2 text-blue-700">ML Libraries</h3>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Scikit-Learn</li>
+        <li>Pandas & NumPy</li>
+        <li>Matplotlib & Seaborn</li>
+        <li>TensorFlow & Keras</li>
+        <li>XGBoost</li>
+      </ul>
+    </div>
+
+    <!-- AI -->
+    <div class="slide-item bg-white rounded-xl shadow-lg border-t-4 border-purple-500 p-6">
+      <h3 class="text-xl font-bold mb-2 text-purple-700">AI & Deep Learning</h3>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Deep Neural Networks</li>
+        <li>CNN, RNN, LSTM</li>
+        <li>Transfer Learning</li>
+        <li>FaceAPI, OpenCV</li>
+        <li>Reinforcement Learning (Basics)</li>
+      </ul>
+    </div>
+
+    <!-- Web Dev -->
+    <div class="slide-item bg-white rounded-xl shadow-lg border-t-4 border-green-500 p-6">
+      <h3 class="text-xl font-bold mb-2 text-green-700">Web Development</h3>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>HTML5, CSS3, JavaScript</li>
+        <li>Tailwind CSS & Bootstrap</li>
+        <li>React.js & Node.js</li>
+        <li>Flask (Python)</li>
+        <li>GoLang (APIs)</li>
+      </ul>
+    </div>
+
+    <!-- Hosting -->
+    <div class="slide-item bg-white rounded-xl shadow-lg border-t-4 border-yellow-500 p-6">
+      <h3 class="text-xl font-bold mb-2 text-yellow-600">Databases & Hosting</h3>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>MySQL, MongoDB</li>
+        <li>Firebase</li>
+        <li>Render, Vercel, Netlify</li>
+        <li>GitHub Pages</li>
+        <li>REST APIs</li>
+      </ul>
+    </div>
+
+    <!-- Tools -->
+    <div class="slide-item bg-white rounded-xl shadow-lg border-t-4 border-red-500 p-6">
+      <h3 class="text-xl font-bold mb-2 text-red-600">Tools & Platforms</h3>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Git & GitHub</li>
+        <li>Postman</li>
+        <li>VS Code & Jupyter</li>
+        <li>Figma</li>
+        <li>Google Colab</li>
+      </ul>
+    </div>
+
+    <!-- Languages -->
+    <div class="slide-item bg-white rounded-xl shadow-lg border-t-4 border-indigo-500 p-6">
+      <h3 class="text-xl font-bold mb-2 text-indigo-700">Languages</h3>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Python (Advanced)</li>
+        <li>JavaScript (Intermediate)</li>
+        <li>C++ (DSA)</li>
+        <li>GoLang (APIs)</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 border-t mt-10 bg-white">
+    <p class="text-gray-600">© 2025 Anshika Singh • Built with Tailwind CSS</p>
+  </footer>
+</body>
+</html>
