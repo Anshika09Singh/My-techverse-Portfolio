@@ -42,46 +42,52 @@
   <div id="particles-js"></div>
 
   <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md">
+  <header class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-md">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-3">
-        <img src="assets/assets/images/Anshika.jpg" alt="Logo" class="w-10 h-10 rounded-full border-2 border-cyan-400" />
-        <h1 class="text-2xl font-bold text-cyan-400">Anshika Singh</h1>
+      <h1 class="text-2xl font-bold text-cyan-400 flex items-center gap-2">
+        <img src="assets/assets/images/Anshika.jpg" alt="Profile Icon" class="w-8 h-8 rounded-full border border-cyan-400" />
+        Anshika Singh
+      </h1>
+      <div class="flex items-center gap-4">
+        <select id="langSwitcher" class="text-sm text-white bg-gray-700 rounded px-2 py-1 border border-gray-600">
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+        </select>
+        <nav class="hidden md:flex space-x-4 text-gray-200 font-medium">
+          <a href="#" class="hover:text-cyan-400 transition">Home</a>
+          <a href="techstack.html" class="hover:text-cyan-400 transition">Tech Stack</a>
+          <a href="ml-projects.html" class="hover:text-cyan-400 transition">ML Projects</a>
+          <a href="web-projects.html" class="hover:text-cyan-400 transition">Web Projects</a>
+          <a href="certificates.html" class="hover:text-cyan-400 transition">Certificates</a>
+          <a href="contact.html" class="hover:text-cyan-400 transition">Contact</a>
+        </nav>
+        <button class="md:hidden text-white" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+          ☰
+        </button>
       </div>
-      <nav class="hidden md:flex space-x-4 text-gray-200 font-medium">
-        <a href="#" class="hover:text-cyan-400 transition">Home</a>
-        <a href="techstack.html" class="hover:text-cyan-400 transition">Tech Stack</a>
-        <a href="ml-projects.html" class="hover:text-cyan-400 transition">ML Projects</a>
-        <a href="web-projects.html" class="hover:text-cyan-400 transition">Web Projects</a>
-        <a href="certificates.html" class="hover:text-cyan-400 transition">Certificates</a>
-        <a href="contact.html" class="hover:text-cyan-400 transition">Contact</a>
-      </nav>
-      <button class="md:hidden text-white" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
-        ☰
-      </button>
     </div>
-    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4 text-sm text-gray-200 bg-gray-900">
-      <a href="#" class="block py-2 hover:text-cyan-400 border-b border-gray-700">Home</a>
-      <a href="techstack.html" class="block py-2 hover:text-cyan-400 border-b border-gray-700">Tech Stack</a>
-      <a href="ml-projects.html" class="block py-2 hover:text-cyan-400 border-b border-gray-700">ML Projects</a>
-      <a href="web-projects.html" class="block py-2 hover:text-cyan-400 border-b border-gray-700">Web Projects</a>
-      <a href="certificates.html" class="block py-2 hover:text-cyan-400 border-b border-gray-700">Certificates</a>
-      <a href="contact.html" class="block py-2 hover:text-cyan-400">Contact</a>
+    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4 text-sm text-gray-200">
+      <a href="#" class="block py-1 hover:text-cyan-400">Home</a>
+      <a href="techstack.html" class="block py-1 hover:text-cyan-400">Tech Stack</a>
+      <a href="ml-projects.html" class="block py-1 hover:text-cyan-400">ML Projects</a>
+      <a href="web-projects.html" class="block py-1 hover:text-cyan-400">Web Projects</a>
+      <a href="certificates.html" class="block py-1 hover:text-cyan-400">Certificates</a>
+      <a href="contact.html" class="block py-1 hover:text-cyan-400">Contact</a>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="pt-36 pb-20 px-6 animate__animated animate__fadeIn">
+  <section class="pt-32 pb-20 px-6 animate__animated animate__fadeIn">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div>
-        <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-6" data-i18n="greeting">
           Hi, I'm <span class="text-cyan-400">Anshika Singh</span>
         </h2>
-        <p class="text-lg text-gray-300 mb-6">
+        <p class="text-lg text-gray-300 mb-6" data-i18n="intro">
           A passionate developer blending <span class="text-purple-400 font-semibold">ML</span>, <span class="text-blue-400 font-semibold">AI</span>, and <span class="text-yellow-300 font-semibold">Web Development</span> using modern tools.
         </p>
-        <p class="text-base text-gray-400 mb-4 leading-relaxed">
-          I consistently submit my work on time, ensuring each task is completed with full dedication and integrity. My approach is rooted in responsibility, creative delivery, and dependable performance.
+        <p class="text-base text-gray-400 mb-4 leading-relaxed" data-i18n="values">
+          I consistently submit my work on time and uphold a strong sense of responsibility and honesty in every project I take on. I focus on maintaining quality and meeting deadlines while staying true to my values and work ethic.. I believe in delivering high-quality results through consistency and passion. I strive to bring ideas to life with creativity, innovation, and integrity.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="assets/assets/images/Anshika Singh final 1).pdf" target="_blank" class="px-6 py-3 rounded-full bg-pink-600 text-white hover:bg-pink-700 button-hover">📄 View Resume</a>
@@ -90,7 +96,7 @@
         </div>
       </div>
       <div class="text-center">
-        <img src="assets/assets/images/Anshika.jpg" alt="Anshika Singh" class="w-80 h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] mx-auto rounded-full object-cover border-4 border-cyan-400 shadow-2xl animate__animated animate__zoomIn" />
+        <img src="assets/assets/images/Anshika.jpg" alt="Anshika Singh" class="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-4 border-cyan-400 shadow-2xl animate__animated animate__zoomIn" />
       </div>
     </div>
   </section>
@@ -123,6 +129,32 @@
   <footer class="text-center py-6 bg-black border-t border-gray-800">
     <p class="text-gray-500">© 2025 Anshika Singh • AIML & Web Developer | Crafted with ❤️</p>
   </footer>
+
+  <!-- Language Script -->
+  <script>
+    const translations = {
+      hi: {
+        greeting: "नमस्ते, मैं हूँ <span class='text-cyan-400'>अंशिका सिंह</span>",
+        intro: "एक समर्पित डेवलपर जो <span class='text-purple-400 font-semibold'>एमएल</span>, <span class='text-blue-400 font-semibold'>एआई</span>, और <span class='text-yellow-300 font-semibold'>वेब डेवलपमेंट</span> में काम करता है।",
+        values: "मैं हमेशा समय पर काम जमा करती हूँ और हर परियोजना में जिम्मेदारी और ईमानदारी बनाए रखती हूँ। गुणवत्ता बनाए रखते हुए समय सीमा का पालन करना मेरी प्राथमिकता है। मैं रचनात्मकता, नवाचार और ईमानदारी के साथ विचारों को साकार करने का प्रयास करती हूँ।"
+      },
+      en: {
+        greeting: "Hi, I'm <span class='text-cyan-400'>Anshika Singh</span>",
+        intro: "A passionate developer blending <span class='text-purple-400 font-semibold'>ML</span>, <span class='text-blue-400 font-semibold'>AI</span>, and <span class='text-yellow-300 font-semibold'>Web Development</span> using modern tools.",
+        values: "I consistently submit my work on time and uphold a strong sense of responsibility and honesty in every project I take on. I focus on maintaining quality and meeting deadlines while staying true to my values and work ethic.. I believe in delivering high-quality results through consistency and passion. I strive to bring ideas to life with creativity, innovation, and integrity."
+      }
+    };
+
+    document.getElementById('langSwitcher').addEventListener('change', function () {
+      const lang = this.value;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+    });
+  </script>
 
   <!-- Particle.js config -->
   <script>
