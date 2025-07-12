@@ -24,6 +24,13 @@
       height: 100%;
       z-index: -1;
     }
+    a.button-hover {
+      transition: all 0.3s ease;
+    }
+    a.button-hover:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
   </style>
 </head>
 <body class="bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white">
@@ -34,7 +41,7 @@
   <header class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-md">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-cyan-400">Anshika Singh</h1>
-      <nav class="space-x-4 text-gray-200 font-medium">
+      <nav class="hidden md:flex space-x-4 text-gray-200 font-medium">
         <a href="#" class="hover:text-cyan-400 transition">Home</a>
         <a href="techstack.html" class="hover:text-cyan-400 transition">Tech Stack</a>
         <a href="ml-projects.html" class="hover:text-cyan-400 transition">ML Projects</a>
@@ -42,6 +49,17 @@
         <a href="certificates.html" class="hover:text-cyan-400 transition">Certificates</a>
         <a href="contact.html" class="hover:text-cyan-400 transition">Contact</a>
       </nav>
+      <button class="md:hidden text-white" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        ☰
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4 text-sm text-gray-200">
+      <a href="#" class="block py-1 hover:text-cyan-400">Home</a>
+      <a href="techstack.html" class="block py-1 hover:text-cyan-400">Tech Stack</a>
+      <a href="ml-projects.html" class="block py-1 hover:text-cyan-400">ML Projects</a>
+      <a href="web-projects.html" class="block py-1 hover:text-cyan-400">Web Projects</a>
+      <a href="certificates.html" class="block py-1 hover:text-cyan-400">Certificates</a>
+      <a href="contact.html" class="block py-1 hover:text-cyan-400">Contact</a>
     </div>
   </header>
 
@@ -56,13 +74,13 @@
           A passionate developer blending <span class="text-purple-400 font-semibold">ML</span>, <span class="text-blue-400 font-semibold">AI</span>, and <span class="text-yellow-300 font-semibold">Web Development</span> using modern tools.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a href="assets/assets/images/Anshika Singh final 1).pdf" target="_blank" class="px-6 py-3 rounded-full bg-pink-600 text-white hover:bg-pink-700 transition">📄 View Resume</a>
-          <a href="web-projects.html" class="px-6 py-3 rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition">🌐 Web Projects</a>
-          <a href="ml-projects.html" class="px-6 py-3 rounded-full border border-yellow-300 text-yellow-300 hover:bg-yellow-300 hover:text-black transition">🤖 AIML Projects</a>
+          <a href="assets/assets/images/Anshika Singh final 1).pdf" target="_blank" class="px-6 py-3 rounded-full bg-pink-600 text-white hover:bg-pink-700 button-hover">📄 View Resume</a>
+          <a href="web-projects.html" class="px-6 py-3 rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black button-hover">🌐 Web Projects</a>
+          <a href="ml-projects.html" class="px-6 py-3 rounded-full border border-yellow-300 text-yellow-300 hover:bg-yellow-300 hover:text-black button-hover">🤖 AIML Projects</a>
         </div>
       </div>
       <div class="text-center">
-        <img src="assets/assets/images/Anshika.jpg" alt="Anshika Singh" class="w-72 h-72 mx-auto rounded-full object-cover border-4 border-cyan-400 shadow-2xl animate__animated animate__zoomIn" />
+        <img src="assets/assets/images/Anshika.jpg" alt="Anshika Singh" class="w-60 h-60 md:w-72 md:h-72 mx-auto rounded-full object-cover border-4 border-cyan-400 shadow-2xl animate__animated animate__zoomIn" />
       </div>
     </div>
   </section>
@@ -71,7 +89,7 @@
   <section class="py-20 px-6">
     <div class="max-w-6xl mx-auto">
       <h3 class="text-3xl font-bold text-center text-cyan-300 mb-12">🔗 Connect with Me</h3>
-      <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
         <a href="https://github.com/Anshika09Singh" target="_blank" class="rounded-xl border border-gray-700 p-6 hover:shadow-cyan-500/50 transform hover:-translate-y-1 transition">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-14 h-14 mx-auto mb-4" alt="GitHub" />
           <h4 class="text-xl font-semibold">GitHub</h4>
@@ -100,7 +118,7 @@
   <script>
     particlesJS("particles-js", {
       particles: {
-        number: { value: 80 },
+        number: { value: 70 },
         size: { value: 3 },
         color: { value: "#00ffff" },
         move: { enable: true, speed: 1 },
