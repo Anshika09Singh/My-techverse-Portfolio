@@ -96,34 +96,45 @@
   <!-- Add custom features like quote generator, AI Mood, or Flip Cards here -->
 
 <!-- 🎯 Developer Quote Generator -->
-<!-- 🎯 Developer Quote Generator -->
-<section class="py-16 px-6 bg-gradient-to-br from-gray-900 via-black to-gray-800 text-center rounded-xl shadow-2xl animate__animated animate__fadeIn">
-  <h3 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-6">
-    📝 Quote of the Moment
-  </h3>
-  <div id="quoteBox" class="text-2xl text-gray-100 italic max-w-3xl mx-auto mb-4 transition-all duration-500 ease-in-out animate__animated animate__fadeInUp">
+<section class="py-16 px-6 bg-gray-900 text-center">
+  <h3 class="text-3xl font-bold text-cyan-300 mb-6">📝 Developer Quote of the Moment</h3>
+  <div id="quoteBox" class="text-xl text-gray-300 italic max-w-3xl mx-auto transition-all duration-300">
     "Code is like humor. When you have to explain it, it’s bad."
   </div>
-  <button onclick="generateQuote()" class="mt-4 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 text-white font-semibold rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-    🔁 Inspire Me
-  </button>
+  <button onclick="generateQuote()" class="mt-6 px-6 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full transition">New Quote</button>
 </section>
 
-
 <!-- 🔮 AI Mood Scanner -->
-<!-- 🔮 AI Mood Scanner -->
-<section class="py-16 px-6 bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-500 text-center rounded-xl shadow-2xl mt-12 animate__animated animate__fadeIn">
-  <h3 class="text-4xl font-extrabold text-black mb-6">🤖 Scan Your Brain Mood</h3>
-  <button onclick="scanMood()" class="px-6 py-3 bg-black hover:bg-gray-800 text-yellow-300 font-bold rounded-full border border-yellow-400 shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-    🧠 Scan Now
-  </button>
-  <p id="moodResult" class="mt-6 text-xl text-black font-medium animate__animated animate__fadeInUp"></p>
+<section class="py-16 px-6 bg-gray-800 text-center">
+  <h3 class="text-3xl font-bold text-yellow-300 mb-6">🤖 AI Mood Scanner</h3>
+  <button onclick="scanMood()" class="px-6 py-2 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-full">Scan Brain</button>
+  <p id="moodResult" class="mt-6 text-lg text-gray-200 font-medium transition-all duration-300"></p>
 </section>
-
 
 <!-- 🔄 Project Flip Cards -->
-
-
+<section class="py-20 px-6 bg-gray-900">
+  <h3 class="text-3xl font-bold text-center text-cyan-300 mb-12">📦 Featured Projects (Flip Cards)</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <div class="[perspective:1000px]">
+      <div class="relative w-full h-64 [transform-style:preserve-3d] transition-transform duration-500 hover:[transform:rotateY(180deg)]">
+        <div class="absolute inset-0 bg-cyan-700 text-white flex items-center justify-center text-xl font-semibold rounded-xl">Smart Horizon</div>
+        <div class="absolute inset-0 bg-white text-black p-4 [transform:rotateY(180deg)] backface-hidden rounded-xl">
+          <h4 class="font-bold text-lg mb-2">Smart Horizon</h4>
+          <p class="text-sm">Brain fitness app with ML-based games & AI quotes.</p>
+        </div>
+      </div>
+    </div>
+    <div class="[perspective:1000px]">
+      <div class="relative w-full h-64 [transform-style:preserve-3d] transition-transform duration-500 hover:[transform:rotateY(180deg)]">
+        <div class="absolute inset-0 bg-purple-600 text-white flex items-center justify-center text-xl font-semibold rounded-xl">NeuroFit</div>
+        <div class="absolute inset-0 bg-white text-black p-4 [transform:rotateY(180deg)] backface-hidden rounded-xl">
+          <h4 class="font-bold text-lg mb-2">NeuroFit</h4>
+          <p class="text-sm">Cognitive Flexibility Trainer with AI integration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Scripts for Quote & Mood -->
 <script>
@@ -131,16 +142,12 @@
     "Code is like humor. When you have to explain it, it’s bad.",
     "First, solve the problem. Then, write the code.",
     "Simplicity is the soul of efficiency.",
-    "Programs must be written for people to read.",
-    "Talk is cheap. Show me the code.",
+    "Experience is the name everyone gives to their mistakes.",
+    "Programs must be written for people to read."
   ];
   function generateQuote() {
     const quote = quotes[Math.floor(Math.random() * quotes.length)];
-    const quoteBox = document.getElementById('quoteBox');
-    quoteBox.classList.remove('animate__fadeInUp');
-    void quoteBox.offsetWidth; // reflow to restart animation
-    quoteBox.innerText = `"${quote}"`;
-    quoteBox.classList.add('animate__fadeInUp');
+    document.getElementById('quoteBox').innerText = `"${quote}"`;
   }
 
   const moods = [
@@ -152,14 +159,9 @@
   ];
   function scanMood() {
     const mood = moods[Math.floor(Math.random() * moods.length)];
-    const moodResult = document.getElementById('moodResult');
-    moodResult.classList.remove('animate__fadeInUp');
-    void moodResult.offsetWidth; // reflow to restart animation
-    moodResult.innerText = mood;
-    moodResult.classList.add('animate__fadeInUp');
+    document.getElementById('moodResult').innerText = mood;
   }
 </script>
-
 
   <!-- Footer -->
   <footer class="text-center py-6 bg-black border-t border-gray-800">
