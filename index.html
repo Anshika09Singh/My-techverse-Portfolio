@@ -11,7 +11,7 @@
   <!-- Animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-  <!-- Favicon (optional) -->
+  <!-- Favicon -->
   <link rel="icon" href="assets/assets/images/Anshika.jpg" type="image/jpg" />
 
   <!-- SEO Meta Tags -->
@@ -74,7 +74,7 @@
           <a href="certificates.html" class="hover:text-cyan-400 transition">Certificates</a>
           <a href="contact.html" class="hover:text-cyan-400 transition">Contact</a>
         </nav>
-        <button class="md:hidden text-white" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">☰</button>
+        <button id="menuToggleBtn" class="md:hidden text-white text-2xl">☰</button>
       </div>
     </div>
     <div id="mobileMenu" class="md:hidden hidden px-6 pb-4 text-sm text-gray-200">
@@ -141,7 +141,19 @@
     <p class="text-gray-500">© 2025 Anshika Singh • AIML & Web Developer | Crafted with ❤️</p>
   </footer>
 
-  <!-- Language Script -->
+  <!-- Navbar Toggle Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggleBtn = document.getElementById("menuToggleBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuToggleBtn.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+      });
+    });
+  </script>
+
+  <!-- Language Translation -->
   <script>
     const translations = {
       hi: {
@@ -167,8 +179,8 @@
     });
   </script>
 
-  <!-- Particle.js -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js" defer></script>
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script>
     window.addEventListener('load', () => {
       particlesJS("particles-js", {
