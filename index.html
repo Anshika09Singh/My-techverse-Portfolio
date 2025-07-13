@@ -7,13 +7,12 @@
 
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-
   <!-- Animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
+  <!-- AOS (Animate on Scroll) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -38,11 +37,10 @@
   </style>
 </head>
 <body class="bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white">
-  <!-- Particles Container -->
   <div id="particles-js"></div>
 
-  <!-- Navbar (fixed version with improved contrast) -->
-  <header class="<header class="fixed top-0 left-0 w-full z-[999] bg-black text-white shadow-md">">
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-[999] bg-black text-white shadow-md">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-cyan-400 flex items-center gap-2">
         <img src="assets/assets/images/Anshika.jpg" alt="Profile Icon" class="w-8 h-8 rounded-full border border-cyan-400" />
@@ -80,15 +78,9 @@
   <section class="pt-32 pb-20 px-6 animate__animated animate__fadeIn">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div>
-        <h2 class="text-4xl md:text-5xl font-extrabold mb-6" data-i18n="greeting">
-          Hi, I'm <span class="text-cyan-400">Anshika Singh</span>
-        </h2>
-        <p class="text-lg text-gray-300 mb-6" data-i18n="intro">
-          A passionate developer blending <span class="text-purple-400 font-semibold">ML</span>, <span class="text-blue-400 font-semibold">AI</span>, and <span class="text-yellow-300 font-semibold">Web Development</span> using modern tools.
-        </p>
-        <p class="text-base text-gray-400 mb-4 leading-relaxed" data-i18n="values">
-          I consistently submit my work on time and uphold a strong sense of responsibility and honesty in every project I take on. I focus on maintaining quality and meeting deadlines while staying true to my values and work ethic.. I believe in delivering high-quality results through consistency and passion. I strive to bring ideas to life with creativity, innovation, and integrity.
-        </p>
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-6" data-i18n="greeting">Hi, I'm <span class="text-cyan-400">Anshika Singh</span></h2>
+        <p class="text-lg text-gray-300 mb-6" data-i18n="intro">A passionate developer blending <span class="text-purple-400 font-semibold">ML</span>, <span class="text-blue-400 font-semibold">AI</span>, and <span class="text-yellow-300 font-semibold">Web Development</span> using modern tools.</p>
+        <p class="text-base text-gray-400 mb-4 leading-relaxed" data-i18n="values">I consistently submit my work on time and uphold a strong sense of responsibility and honesty in every project I take on...</p>
         <div class="flex flex-wrap gap-4">
           <a href="assets/assets/images/Anshika Singh final 1).pdf" target="_blank" class="px-6 py-3 rounded-full bg-pink-600 text-white hover:bg-pink-700 button-hover">📄 View Resume</a>
           <a href="web-projects.html" class="px-6 py-3 rounded-full border border-cyan-400 text-cyan-400 hover-invert button-hover">🌐 Web Projects</a>
@@ -101,50 +93,95 @@
     </div>
   </section>
 
-  <!-- Connect Section -->
-  <section class="py-20 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold text-center text-cyan-300 mb-12">🔗 Connect with Me</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
-        <a href="https://github.com/Anshika09Singh" target="_blank" class="rounded-xl border border-gray-700 p-6 hover:shadow-cyan-500/50 transform hover:-translate-y-1 transition">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-14 h-14 mx-auto mb-4" alt="GitHub" />
-          <h4 class="text-xl font-semibold">GitHub</h4>
-          <p class="text-gray-400 text-sm">Explore my open-source work</p>
-        </a>
-        <a href="https://www.linkedin.com/in/anshika-singh-031b132a5/" target="_blank" class="rounded-xl border border-gray-700 p-6 hover:shadow-blue-500/50 transform hover:-translate-y-1 transition">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="w-14 h-14 mx-auto mb-4" alt="LinkedIn" />
-          <h4 class="text-xl font-semibold">LinkedIn</h4>
-          <p class="text-gray-400 text-sm">Professional updates</p>
-        </a>
-        <a href="https://leetcode.com/u/Anshika09singh/" target="_blank" class="rounded-xl border border-gray-700 p-6 hover:shadow-yellow-400/50 transform hover:-translate-y-1 transition">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" class="w-12 h-12 mx-auto mb-4 bg-white rounded-full p-1" alt="LeetCode" />
-          <h4 class="text-xl font-semibold">LeetCode</h4>
-          <p class="text-gray-400 text-sm">Coding practice & challenges</p>
-        </a>
+  <!-- Add custom features like quote generator, AI Mood, or Flip Cards here -->
+
+<!-- 🎯 Developer Quote Generator -->
+<section class="py-16 px-6 bg-gray-900 text-center">
+  <h3 class="text-3xl font-bold text-cyan-300 mb-6">📝 Developer Quote of the Moment</h3>
+  <div id="quoteBox" class="text-xl text-gray-300 italic max-w-3xl mx-auto transition-all duration-300">
+    "Code is like humor. When you have to explain it, it’s bad."
+  </div>
+  <button onclick="generateQuote()" class="mt-6 px-6 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full transition">New Quote</button>
+</section>
+
+<!-- 🔮 AI Mood Scanner -->
+<section class="py-16 px-6 bg-gray-800 text-center">
+  <h3 class="text-3xl font-bold text-yellow-300 mb-6">🤖 AI Mood Scanner</h3>
+  <button onclick="scanMood()" class="px-6 py-2 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-full">Scan Brain</button>
+  <p id="moodResult" class="mt-6 text-lg text-gray-200 font-medium transition-all duration-300"></p>
+</section>
+
+<!-- 🔄 Project Flip Cards -->
+<section class="py-20 px-6 bg-gray-900">
+  <h3 class="text-3xl font-bold text-center text-cyan-300 mb-12">📦 Featured Projects (Flip Cards)</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <div class="[perspective:1000px]">
+      <div class="relative w-full h-64 [transform-style:preserve-3d] transition-transform duration-500 hover:[transform:rotateY(180deg)]">
+        <div class="absolute inset-0 bg-cyan-700 text-white flex items-center justify-center text-xl font-semibold rounded-xl">Smart Horizon</div>
+        <div class="absolute inset-0 bg-white text-black p-4 [transform:rotateY(180deg)] backface-hidden rounded-xl">
+          <h4 class="font-bold text-lg mb-2">Smart Horizon</h4>
+          <p class="text-sm">Brain fitness app with ML-based games & AI quotes.</p>
+        </div>
       </div>
     </div>
-  </section>
+    <div class="[perspective:1000px]">
+      <div class="relative w-full h-64 [transform-style:preserve-3d] transition-transform duration-500 hover:[transform:rotateY(180deg)]">
+        <div class="absolute inset-0 bg-purple-600 text-white flex items-center justify-center text-xl font-semibold rounded-xl">NeuroFit</div>
+        <div class="absolute inset-0 bg-white text-black p-4 [transform:rotateY(180deg)] backface-hidden rounded-xl">
+          <h4 class="font-bold text-lg mb-2">NeuroFit</h4>
+          <p class="text-sm">Cognitive Flexibility Trainer with AI integration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Scripts for Quote & Mood -->
+<script>
+  const quotes = [
+    "Code is like humor. When you have to explain it, it’s bad.",
+    "First, solve the problem. Then, write the code.",
+    "Simplicity is the soul of efficiency.",
+    "Experience is the name everyone gives to their mistakes.",
+    "Programs must be written for people to read."
+  ];
+  function generateQuote() {
+    const quote = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById('quoteBox').innerText = `"${quote}"`;
+  }
+
+  const moods = [
+    "🧠 Focus Mode Activated! Time to build.",
+    "🚀 Creative Mode: New ideas incoming!",
+    "🐞 Debugging Warrior: Bug extermination squad ready.",
+    "⚡️ High Energy: Your brain is at 120%!",
+    "📚 Learning Mode: Absorbing new tech."
+  ];
+  function scanMood() {
+    const mood = moods[Math.floor(Math.random() * moods.length)];
+    document.getElementById('moodResult').innerText = mood;
+  }
+</script>
 
   <!-- Footer -->
   <footer class="text-center py-6 bg-black border-t border-gray-800">
     <p class="text-gray-500">© 2025 Anshika Singh • AIML & Web Developer | Crafted with ❤️</p>
   </footer>
 
-  <!-- Language Script -->
+  <!-- Language Switcher Script -->
   <script>
     const translations = {
       hi: {
         greeting: "नमस्ते, मैं हूँ <span class='text-cyan-400'>अंशिका सिंह</span>",
         intro: "एक समर्पित डेवलपर जो <span class='text-purple-400 font-semibold'>एमएल</span>, <span class='text-blue-400 font-semibold'>एआई</span>, और <span class='text-yellow-300 font-semibold'>वेब डेवलपमेंट</span> में काम करता है।",
-        values: "मैं हमेशा समय पर काम जमा करती हूँ और हर परियोजना में जिम्मेदारी और ईमानदारी बनाए रखती हूँ। गुणवत्ता बनाए रखते हुए समय सीमा का पालन करना मेरी प्राथमिकता है। मैं रचनात्मकता, नवाचार और ईमानदारी के साथ विचारों को साकार करने का प्रयास करती हूँ।"
+        values: "मैं हमेशा समय पर काम जमा करती हूँ और हर परियोजना में जिम्मेदारी और ईमानदारी बनाए रखती हूँ..."
       },
       en: {
         greeting: "Hi, I'm <span class='text-cyan-400'>Anshika Singh</span>",
         intro: "A passionate developer blending <span class='text-purple-400 font-semibold'>ML</span>, <span class='text-blue-400 font-semibold'>AI</span>, and <span class='text-yellow-300 font-semibold'>Web Development</span> using modern tools.",
-        values: "I consistently submit my work on time and uphold a strong sense of responsibility and honesty in every project I take on. I focus on maintaining quality and meeting deadlines while staying true to my values and work ethic.. I believe in delivering high-quality results through consistency and passion. I strive to bring ideas to life with creativity, innovation, and integrity."
+        values: "I consistently submit my work on time and uphold a strong sense of responsibility and honesty in every project I take on..."
       }
     };
-
     document.getElementById('langSwitcher').addEventListener('change', function () {
       const lang = this.value;
       document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -173,5 +210,7 @@
       }
     });
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
