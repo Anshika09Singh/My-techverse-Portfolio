@@ -7,8 +7,6 @@
 
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-
-  <!-- Animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <style>
@@ -18,124 +16,148 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    #particles-js {
+    #introScreen {
       position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none; /* IMPORTANT: allow clicks to pass through */
       top: 0;
       left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: black;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 1s ease-in-out;
     }
-    header, section, footer {
-      position: relative;
-      z-index: 10;
+    #mainContent {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
     }
   </style>
 </head>
 
 <body class="bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white">
 
-  <!-- Particles background -->
-  <div id="particles-js"></div>
+  <!-- Particles Background -->
+  <div id="particles-js" class="fixed w-full h-full top-0 left-0 z-0 pointer-events-none"></div>
 
-  <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-black text-white shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-cyan-400 flex items-center gap-2">
-        <img src="assets/assets/images/Anshika.jpg" alt="Profile Icon" class="w-8 h-8 rounded-full border border-cyan-400" />
-        Anshika Singh
-      </h1>
-      <nav class="hidden md:flex space-x-6 text-gray-200 font-medium">
-        <a href="#" class="hover:text-cyan-400">Home</a>
-        <a href="techstack.html" class="hover:text-cyan-400">Tech Stack</a>
-        <a href="ml-projects.html" class="hover:text-cyan-400">ML Projects</a>
-        <a href="web-projects.html" class="hover:text-cyan-400">Web Projects</a>
-        <a href="certificates.html" class="hover:text-cyan-400">Certificates</a>
-        <a href="contact.html" class="hover:text-cyan-400">Contact</a>
-      </nav>
-      <button id="menuToggleBtn" class="md:hidden text-white text-2xl">☰</button>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 text-sm text-gray-200">
-      <a href="#" class="block py-1 hover:text-cyan-400">Home</a>
-      <a href="techstack.html" class="block py-1 hover:text-cyan-400">Tech Stack</a>
-      <a href="ml-projects.html" class="block py-1 hover:text-cyan-400">ML Projects</a>
-      <a href="web-projects.html" class="block py-1 hover:text-cyan-400">Web Projects</a>
-      <a href="certificates.html" class="block py-1 hover:text-cyan-400">Certificates</a>
-      <a href="contact.html" class="block py-1 hover:text-cyan-400">Contact</a>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="pt-32 pb-20 px-6 animate__animated animate__fadeIn">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
-          Hi, I'm <span class="text-cyan-400">Anshika Singh</span>
-        </h2>
-        <p class="text-lg text-gray-300 mb-6">
-          A passionate developer blending <span class="text-purple-400 font-semibold">ML</span>, <span class="text-blue-400 font-semibold">AI</span>, and <span class="text-yellow-300 font-semibold">Web Development</span>.
-        </p>
-        <a href="assets/assets/images/Anshika Singh final 1.pdf" target="_blank" class="px-6 py-3 mt-4 inline-block rounded-full bg-pink-600 text-white hover:bg-pink-700 transition">📄 View Resume</a>
-      </div>
-      <div class="text-center">
-        <img src="assets/assets/images/Anshika.jpg" alt="Anshika Singh" class="w-72 h-72 rounded-full object-cover border-4 border-cyan-400 shadow-xl animate__animated animate__zoomIn" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Connect With Me Section -->
-<section class="relative z-10 py-20 px-6">
-  <div class="max-w-6xl mx-auto">
-    <h3 class="text-3xl md:text-4xl font-bold text-center text-cyan-300 mb-12 animate__animated animate__fadeInDown">🔗 Connect with Me</h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center animate__animated animate__fadeInUp animate__delay-1s">
-      
-      <!-- GitHub -->
-      <a href="https://github.com/Anshika09Singh" target="_blank" class="bg-gray-900 p-6 rounded-2xl border border-gray-700 hover:shadow-cyan-500/50 hover:scale-105 transform transition duration-300">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-14 h-14 mx-auto mb-4" alt="GitHub" />
-        <h4 class="text-xl font-semibold text-white mb-1">GitHub</h4>
-        <p class="text-gray-400 text-sm">Explore my open-source projects</p>
-      </a>
-
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/anshika-singh-031b132a5/" target="_blank" class="bg-gray-900 p-6 rounded-2xl border border-gray-700 hover:shadow-blue-500/50 hover:scale-105 transform transition duration-300">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="w-14 h-14 mx-auto mb-4" alt="LinkedIn" />
-        <h4 class="text-xl font-semibold text-white mb-1">LinkedIn</h4>
-        <p class="text-gray-400 text-sm">Connect for updates & networking</p>
-      </a>
-
-      <!-- LeetCode -->
-      <a href="https://leetcode.com/u/Anshika09singh/" target="_blank" class="bg-gray-900 p-6 rounded-2xl border border-gray-700 hover:shadow-yellow-400/50 hover:scale-105 transform transition duration-300">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" class="w-12 h-12 mx-auto mb-4 bg-white rounded-full p-1" alt="LeetCode" />
-        <h4 class="text-xl font-semibold text-white mb-1">LeetCode</h4>
-        <p class="text-gray-400 text-sm">My coding challenges & solutions</p>
-      </a>
-
-    </div>
+  <!-- INTRO SPLASH SCREEN -->
+  <div id="introScreen" class="text-center text-white">
+    <h1 class="text-5xl md:text-7xl font-extrabold animate__animated animate__fadeInDown">
+      Anshika Singh
+    </h1>
+    <h2 id="professionText" class="text-2xl md:text-3xl font-medium mt-6 animate__animated" style="display: none;">
+      ML & Web Developer
+    </h2>
   </div>
-</section>
 
+  <!-- MAIN CONTENT -->
+  <div id="mainContent">
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-black text-white shadow-md">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-cyan-400 flex items-center gap-2">
+          <img src="assets/assets/images/Anshika.jpg" alt="Profile Icon" class="w-8 h-8 rounded-full border border-cyan-400" />
+          Anshika Singh
+        </h1>
+        <nav class="hidden md:flex space-x-6 text-gray-200 font-medium">
+          <a href="#" class="hover:text-cyan-400">Home</a>
+          <a href="techstack.html" class="hover:text-cyan-400">Tech Stack</a>
+          <a href="ml-projects.html" class="hover:text-cyan-400">ML Projects</a>
+          <a href="web-projects.html" class="hover:text-cyan-400">Web Projects</a>
+          <a href="certificates.html" class="hover:text-cyan-400">Certificates</a>
+          <a href="contact.html" class="hover:text-cyan-400">Contact</a>
+        </nav>
+        <button id="menuToggleBtn" class="md:hidden text-white text-2xl">☰</button>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 text-sm text-gray-200">
+        <a href="#" class="block py-1 hover:text-cyan-400">Home</a>
+        <a href="techstack.html" class="block py-1 hover:text-cyan-400">Tech Stack</a>
+        <a href="ml-projects.html" class="block py-1 hover:text-cyan-400">ML Projects</a>
+        <a href="web-projects.html" class="block py-1 hover:text-cyan-400">Web Projects</a>
+        <a href="certificates.html" class="block py-1 hover:text-cyan-400">Certificates</a>
+        <a href="contact.html" class="block py-1 hover:text-cyan-400">Contact</a>
+      </div>
+    </header>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 bg-black border-t border-gray-800 relative z-10">
-    <p class="text-gray-500">© 2025 Anshika Singh • AIML & Web Developer | Crafted with ❤️</p>
-  </footer>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6 animate__animated animate__fadeIn">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+            Hi, I'm <span class="text-cyan-400">Anshika Singh</span>
+          </h2>
+          <p class="text-lg text-gray-300 mb-6">
+            A passionate developer blending <span class="text-purple-400 font-semibold">ML</span>, <span class="text-blue-400 font-semibold">AI</span>, and <span class="text-yellow-300 font-semibold">Web Development</span>.
+          </p>
+          <a href="assets/assets/images/Anshika Singh final 1.pdf" target="_blank" class="px-6 py-3 mt-4 inline-block rounded-full bg-pink-600 text-white hover:bg-pink-700 transition">📄 View Resume</a>
+        </div>
+        <div class="text-center">
+          <img src="assets/assets/images/Anshika.jpg" alt="Anshika Singh" class="w-72 h-72 rounded-full object-cover border-4 border-cyan-400 shadow-xl animate__animated animate__zoomIn" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect With Me Section -->
+    <section class="relative z-10 py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h3 class="text-3xl md:text-4xl font-bold text-center text-cyan-300 mb-12 animate__animated animate__fadeInDown">🔗 Connect with Me</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center">
+          <a href="https://github.com/Anshika09Singh" target="_blank" class="bg-gray-900 p-6 rounded-2xl border border-gray-700 hover:shadow-cyan-500/50 hover:scale-105 transform transition duration-300">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-14 h-14 mx-auto mb-4" alt="GitHub" />
+            <h4 class="text-xl font-semibold text-white mb-1">GitHub</h4>
+            <p class="text-gray-400 text-sm">Explore my open-source projects</p>
+          </a>
+          <a href="https://www.linkedin.com/in/anshika-singh-031b132a5/" target="_blank" class="bg-gray-900 p-6 rounded-2xl border border-gray-700 hover:shadow-blue-500/50 hover:scale-105 transform transition duration-300">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="w-14 h-14 mx-auto mb-4" alt="LinkedIn" />
+            <h4 class="text-xl font-semibold text-white mb-1">LinkedIn</h4>
+            <p class="text-gray-400 text-sm">Connect for updates & networking</p>
+          </a>
+          <a href="https://leetcode.com/u/Anshika09singh/" target="_blank" class="bg-gray-900 p-6 rounded-2xl border border-gray-700 hover:shadow-yellow-400/50 hover:scale-105 transform transition duration-300">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" class="w-12 h-12 mx-auto mb-4 bg-white rounded-full p-1" alt="LeetCode" />
+            <h4 class="text-xl font-semibold text-white mb-1">LeetCode</h4>
+            <p class="text-gray-400 text-sm">My coding challenges & solutions</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 bg-black border-t border-gray-800 relative z-10">
+      <p class="text-gray-500">© 2025 Anshika Singh • AIML & Web Developer | Crafted with ❤️</p>
+    </footer>
+  </div>
 
   <!-- Scripts -->
   <script>
-    // Mobile menu toggle
-    document.addEventListener("DOMContentLoaded", () => {
-      const menuToggleBtn = document.getElementById("menuToggleBtn");
-      const mobileMenu = document.getElementById("mobileMenu");
+    window.addEventListener("load", () => {
+      const intro = document.getElementById("introScreen");
+      const profession = document.getElementById("professionText");
+      const mainContent = document.getElementById("mainContent");
 
-      menuToggleBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
+      // Show profession after 2 seconds
+      setTimeout(() => {
+        profession.style.display = "block";
+        profession.classList.add("animate__fadeInUp");
+      }, 2000);
+
+      // Show main site after 4 seconds
+      setTimeout(() => {
+        intro.style.opacity = "0";
+        mainContent.style.opacity = "1";
+        setTimeout(() => intro.style.display = "none", 1000);
+      }, 4000);
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("menuToggleBtn").addEventListener("click", () => {
+        document.getElementById("mobileMenu").classList.toggle("hidden");
       });
     });
   </script>
 
-  <!-- Correct Particles.js CDN -->
+  <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
     window.addEventListener('load', () => {
