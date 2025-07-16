@@ -3,147 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anshika | ML & Web Developer</title>
-
-  <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="assets/assets/images/Anshika.jpg" type="image/jpg" />
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Anshika Singh | AIML & Web Developer Portfolio" />
-  <meta name="author" content="Anshika Singh" />
-
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    a.button-hover {
-      transition: all 0.3s ease;
-    }
-
-    a.button-hover:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    }
-
-    .hover-invert:hover {
-      background-color: white;
-      color: black;
-    }
-  </style>
-</head>
-<body class="bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white">
-
-  <!-- Particles Container -->
-  <div id="particles-js"></div>
-
-  <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full z-[999] bg-black text-white shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-cyan-400 flex items-center gap-2">
-        <img src="assets/assets/images/Anshika.jpg" alt="Profile Icon" class="w-8 h-8 rounded-full border border-cyan-400" />
-        Anshika Singh
-      </h1>
-      <div class="flex items-center gap-4">
-        <select id="langSwitcher" class="text-sm text-white bg-gray-700 rounded px-2 py-1 border border-gray-600">
-          <option value="en">English</option>
-          <option value="hi">हिंदी</option>
-        </select>
-        <nav class="hidden md:flex space-x-4 text-gray-200 font-medium">
-          <a href="#" class="hover:text-cyan-400 transition">Home</a>
-          <a href="techstack.html" class="hover:text-cyan-400 transition">Tech Stack</a>
-          <a href="ml-projects.html" class="hover:text-cyan-400 transition">ML Projects</a>
-          <a href="web-projects.html" class="hover:text-cyan-400 transition">Web Projects</a>
-          <a href="certificates.html" class="hover:text-cyan-400 transition">Certificates</a>
-          <a href="contact.html" class="hover:text-cyan-400 transition">Contact</a>
-        </nav>
-        <button id="menuToggleBtn" class="md:hidden text-white text-2xl">☰</button>
-      </div>
-    </div>
-    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4 text-sm text-gray-200">
-      <a href="#" class="block py-1 hover:text-cyan-400">Home</a>
-      <a href="techstack.html" class="block py-1 hover:text-cyan-400">Tech Stack</a>
-      <a href="ml-projects.html" class="block py-1 hover:text-cyan-400">ML Projects</a>
-      <a href="web-projects.html" class="block py-1 hover:text-cyan-400">Web Projects</a>
-      <a href="certificates.html" class="block py-1 hover:text-cyan-400">Certificates</a>
-      <a href="contact.html" class="block py-1 hover:text-cyan-400">Contact</a>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="pt-32 pb-20 px-6 animate__animated animate__fadeIn">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-4xl md:text-5xl font-extrabold mb-6" data-i18n="greeting">
-          Hi, I'm <span class="text-cyan-400">Anshika Singh</span>
-        </h2>
-        <p class="text-lg text-gray-300 mb-6" data-i18n="intro">
-          A passionate developer blending <span class="text-purple-400 font-semibold">ML</span>, <span class="text-blue-400 font-semibold">AI</span>, and <span class="text-yellow-300 font-semibold">Web Development</span> using modern tools.
-        </p>
-        <p class="text-base text-gray-400 mb-4 leading-relaxed" data-i18n="values">
-          I consistently submit my work on time and uphold a strong sense of responsibility and honesty in every project I take on. I focus on maintaining quality and meeting deadlines while staying true to my values and work ethic. I believe in delivering high-quality results through consistency and passion. I strive to bring ideas to life with creativity, innovation, and integrity.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="assets/assets/images/Anshika Singh final 1.pdf" target="_blank" class="px-6 py-3 rounded-full bg-pink-600 text-white hover:bg-pink-700 button-hover">📄 View Resume</a>
-          <a href="web-projects.html" class="px-6 py-3 rounded-full border border-cyan-400 text-cyan-400 hover-invert button-hover">🌐 Web Projects</a>
-          <a href="ml-projects.html" class="px-6 py-3 rounded-full border border-yellow-300 text-yellow-300 hover:bg-yellow-300 hover:text-black button-hover">🤖 AIML Projects</a>
-        </div>
-      </div>
-      <div class="text-center">
-        <img src="assets/assets/images/Anshika.jpg" alt="Anshika Singh" class="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-4 border-cyan-400 shadow-2xl animate__animated animate__zoomIn" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Connect Section -->
-  <section class="py-20 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold text-center text-cyan-300 mb-12">🔗 Connect with Me</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
-        <a href="https://github.com/Anshika09Singh" target="_blank" class="rounded-xl border border-gray-700 p-6 hover:shadow-cyan-500/50 transform hover:-translate-y-1 transition">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-14 h-14 mx-auto mb-4" alt="GitHub" />
-          <h4 class="text-xl font-semibold">GitHub</h4>
-          <p class="text-gray-400 text-sm">Explore my open-source work</p>
-        </a>
-        <a href="https://www.linkedin.com/in/anshika-singh-031b132a5/" target="_blank" class="rounded-xl border border-gray-700 p-6 hover:shadow-blue-500/50 transform hover:-translate-y-1 transition">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="w-14 h-14 mx-auto mb-4" alt="LinkedIn" />
-          <h4 class="text-xl font-semibold">LinkedIn</h4>
-          <p class="text-gray-400 text-sm">Professional updates</p>
-        </a>
-        <a href="https://leetcode.com/u/Anshika09singh/" target="_blank" class="rounded-xl border border-gray-700 p-6 hover:shadow-yellow-400/50 transform hover:-translate-y-1 transition">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" class="w-12 h-12 mx-auto mb-4 bg-white rounded-full p-1" alt="LeetCode" />
-          <h4 class="text-xl font-semibold">LeetCode</h4>
-          <p class="text-gray-400 text-sm">Coding practice & challenges</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center py-6 bg-black border-t border-gray-800">
-    <p class="text-gray-500">© 2025 Anshika Singh • AIML & Web Developer | Crafted with ❤️</p>
-  </footer>
-
-  <!-- JavaScript for Navigation and Translation -->
-  <script>
+  <title>Test | Anshika</title>
+  <script defer>
     document.addEventListener("DOMContentLoaded", function () {
+      // Menu toggle
       const menuToggleBtn = document.getElementById("menuToggleBtn");
       const mobileMenu = document.getElementById("mobileMenu");
 
@@ -151,16 +14,15 @@
         mobileMenu.classList.toggle("hidden");
       });
 
+      // Language switch
       const translations = {
         hi: {
-          greeting: "नमस्ते, मैं हूँ <span class='text-cyan-400'>अंशिका सिंह</span>",
-          intro: "एक समर्पित डेवलपर जो <span class='text-purple-400 font-semibold'>एमएल</span>, <span class='text-blue-400 font-semibold'>एआई</span>, और <span class='text-yellow-300 font-semibold'>वेब डेवलपमेंट</span> में काम करता है।",
-          values: "मैं हमेशा समय पर काम जमा करती हूँ और हर परियोजना में जिम्मेदारी और ईमानदारी बनाए रखती हूँ। गुणवत्ता बनाए रखते हुए समय सीमा का पालन करना मेरी प्राथमिकता है। मैं रचनात्मकता, नवाचार और ईमानदारी के साथ विचारों को साकार करने का प्रयास करती हूँ।"
+          greeting: "नमस्ते, मैं हूँ <span style='color:#00FFFF;'>अंशिका सिंह</span>",
+          intro: "मैं एक <span style='color:yellow;'>वेब डेवलपर</span> हूँ।"
         },
         en: {
-          greeting: "Hi, I'm <span class='text-cyan-400'>Anshika Singh</span>",
-          intro: "A passionate developer blending <span class='text-purple-400 font-semibold'>ML</span>, <span class='text-blue-400 font-semibold'>AI</span>, and <span class='text-yellow-300 font-semibold'>Web Development</span> using modern tools.",
-          values: "I consistently submit my work on time and uphold a strong sense of responsibility and honesty in every project I take on. I focus on maintaining quality and meeting deadlines while staying true to my values and work ethic. I believe in delivering high-quality results through consistency and passion. I strive to bring ideas to life with creativity, innovation, and integrity."
+          greeting: "Hi, I'm <span style='color:#00FFFF;'>Anshika Singh</span>",
+          intro: "I am a <span style='color:yellow;'>Web Developer</span>."
         }
       };
 
@@ -176,25 +38,60 @@
     });
   </script>
 
-  <!-- Particles.js -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-  <script>
-    window.addEventListener('load', () => {
-      particlesJS("particles-js", {
-        particles: {
-          number: { value: 70 },
-          size: { value: 3 },
-          color: { value: "#00ffff" },
-          move: { enable: true, speed: 1 },
-          line_linked: { enable: true, color: "#00ffff" }
-        },
-        interactivity: {
-          events: {
-            onhover: { enable: true, mode: "repulse" }
-          }
-        }
-      });
-    });
-  </script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #111;
+      color: white;
+      padding: 20px;
+    }
+
+    #mobileMenu {
+      background: #222;
+      padding: 10px;
+    }
+
+    button {
+      background: cyan;
+      color: black;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    select {
+      background: black;
+      color: white;
+      border: 1px solid gray;
+      padding: 4px;
+    }
+
+    a {
+      display: block;
+      padding: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div>
+    <button id="menuToggleBtn">☰</button>
+    <select id="langSwitcher">
+      <option value="en">English</option>
+      <option value="hi">हिंदी</option>
+    </select>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden">
+    <a href="#">Home</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <h2 data-i18n="greeting">Hi, I'm <span style="color:#00FFFF;">Anshika Singh</span></h2>
+  <p data-i18n="intro">I am a <span style="color:yellow;">Web Developer</span>.</p>
 </body>
 </html>
