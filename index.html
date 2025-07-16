@@ -135,7 +135,7 @@
   </footer>
 
   <!-- JavaScript: Mobile Toggle + Language Switch -->
-  <script>
+  <!-- <script>
     document.addEventListener("DOMContentLoaded", function () {
       const menuToggleBtn = document.getElementById("menuToggleBtn");
       const mobileMenu = document.getElementById("mobileMenu");
@@ -149,13 +149,13 @@
           intro: "एक समर्पित डेवलपर जो <span class='text-purple-400 font-semibold'>एमएल</span>, <span class='text-blue-400 font-semibold'>एआई</span>, और <span class='text-yellow-300 font-semibold'>वेब डेवलपमेंट</span> करता है।",
           values: "मैं समय पर काम जमा करती हूँ और हर प्रोजेक्ट में ईमानदारी और ज़िम्मेदारी से काम करती हूँ।"
         },
-        en: {
-          greeting: "Hi, I'm <span class='text-cyan-400'>Anshika Singh</span>",
+        en: { -->
+          <!-- greeting: "Hi, I'm <span class='text-cyan-400'>Anshika Singh</span>",
           intro: "A passionate developer blending <span class='text-purple-400 font-semibold'>ML</span>, <span class='text-blue-400 font-semibold'>AI</span>, and <span class='text-yellow-300 font-semibold'>Web Development</span> using modern tools.",
           values: "I consistently submit my work on time and uphold a strong sense of responsibility and honesty in every project I take on. I focus on maintaining quality and meeting deadlines while staying true to my values and work ethic. I believe in delivering high-quality results through consistency and passion. I strive to bring ideas to life with creativity, innovation, and integrity."
         }
-      };
-
+      }; -->
+<!-- 
       document.getElementById("langSwitcher").addEventListener("change", function () {
         const lang = this.value;
         document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -166,7 +166,49 @@
         });
       });
     });
-  </script>
+  </script> -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggleBtn = document.getElementById("menuToggleBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const langSwitcher = document.getElementById("langSwitcher");
+
+    menuToggleBtn.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    const translations = {
+      hi: {
+        greeting: "नमस्ते, मैं हूँ <span class='text-cyan-400'>अंशिका सिंह</span>",
+        intro: "एक समर्पित डेवलपर जो <span class='text-purple-400 font-semibold'>एमएल</span>, <span class='text-blue-400 font-semibold'>एआई</span>, और <span class='text-yellow-300 font-semibold'>वेब डेवलपमेंट</span> करता है।",
+        values: "मैं समय पर काम जमा करती हूँ और हर प्रोजेक्ट में ईमानदारी और ज़िम्मेदारी से काम करती हूँ।"
+      },
+      en: {
+        greeting: "Hi, I'm <span class='text-cyan-400'>Anshika Singh</span>",
+        intro: "A passionate developer blending <span class='text-purple-400 font-semibold'>ML</span>, <span class='text-blue-400 font-semibold'>AI</span>, and <span class='text-yellow-300 font-semibold'>Web Development</span> using modern tools.",
+        values: "I consistently submit my work on time and uphold a strong sense of responsibility and honesty in every project I take on. I focus on maintaining quality and meeting deadlines while staying true to my values and work ethic. I believe in delivering high-quality results through consistency and passion. I strive to bring ideas to life with creativity, innovation, and integrity."
+      }
+    };
+
+    function updateLanguage(lang) {
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+    }
+
+    // Apply the default language (English) on load
+    updateLanguage(langSwitcher.value);
+
+    // Change language on selection
+    langSwitcher.addEventListener("change", function () {
+      updateLanguage(this.value);
+    });
+  });
+</script>
+
 
   <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
